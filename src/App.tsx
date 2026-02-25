@@ -365,7 +365,7 @@ export default function App() {
                     <img 
                       src="/file.svg" 
                       alt="Profile" 
-                      className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
+                      className="w-full h-full object-cover transition-all duration-700"
                       referrerPolicy="no-referrer"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
