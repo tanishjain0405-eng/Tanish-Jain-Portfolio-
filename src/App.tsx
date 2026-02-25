@@ -363,7 +363,7 @@ export default function App() {
                   <div className="absolute inset-0 border border-zinc-800 rounded-2xl -m-4 z-0" />
                   <div className="relative z-10 w-full h-full overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800">
                     <img 
-                      src="/P1076548.JPG" 
+                      src="/file.svg" 
                       alt="Profile" 
                       className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700"
                       referrerPolicy="no-referrer"
