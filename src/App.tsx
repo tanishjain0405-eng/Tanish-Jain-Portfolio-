@@ -1008,23 +1008,7 @@ export default function App() {
                 ))}
               </div>
 
-              <div className="mt-32 pt-32 border-t border-zinc-900">
-                <div className="max-w-3xl">
-                  <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-600 mb-12">Skill Stack Integration</h2>
-                  <div className="space-y-8">
-                    <p className="text-2xl text-zinc-400 leading-tight">
-                      Across finance, modeling, and technical analysis, the objective remains consistent:
-                    </p>
-                    <p className="text-4xl md:text-5xl text-white font-medium tracking-tighter">
-                      Build institutional depth.
-                    </p>
-                    <div className="pt-8 space-y-4">
-                      <p className="text-zinc-500 text-lg">I do not collect certifications for display.</p>
-                      <p className="text-white text-2xl font-medium italic">I build capability for leverage.</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
+
             </Section>
           </motion.div>
         ) : view === 'contact' ? (
@@ -1083,53 +1067,22 @@ export default function App() {
                       <div className="flex gap-12">
                         <div>
                           <div className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest mb-2">LinkedIn</div>
-                          <a href="#" className="text-white hover:text-zinc-400 transition-colors flex items-center gap-2">
+                          <a href="https://www.linkedin.com/in/tanish-jain-542381354" target="_blank" rel="noopener noreferrer" className="text-white hover:text-zinc-400 transition-colors flex items-center gap-2">
                             Profile <ArrowRight className="w-4 h-4" />
                           </a>
                         </div>
                         <div>
                           <div className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest mb-2">Resume</div>
-                          <button className="text-white hover:text-zinc-400 transition-colors flex items-center gap-2">
+                          <a href="/resume.pdf" download="Tanish_Jain_Resume.pdf" className="text-white hover:text-zinc-400 transition-colors flex items-center gap-2">
                             Download PDF <Download className="w-4 h-4" />
-                          </button>
+                          </a>
                         </div>
                       </div>
                     </div>
                   </div>
                 </div>
 
-                <div className="p-12 border border-zinc-900 rounded-2xl bg-zinc-950/20">
-                  <h2 className="text-xs font-mono text-zinc-600 uppercase tracking-[0.3em] mb-12">Message</h2>
-                  <form className="space-y-8">
-                    <div>
-                      <label className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest block mb-4">Name</label>
-                      <input 
-                        type="text" 
-                        className="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-white transition-colors"
-                        placeholder="Full Name"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest block mb-4">Email</label>
-                      <input 
-                        type="email" 
-                        className="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-white transition-colors"
-                        placeholder="email@example.com"
-                      />
-                    </div>
-                    <div>
-                      <label className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest block mb-4">Message</label>
-                      <textarea 
-                        rows={4}
-                        className="w-full bg-transparent border-b border-zinc-800 py-4 text-white focus:outline-none focus:border-white transition-colors resize-none"
-                        placeholder="Briefly describe the context..."
-                      />
-                    </div>
-                    <button className="w-full py-4 bg-white text-black font-medium rounded-full hover:bg-zinc-200 transition-colors">
-                      Send Message
-                    </button>
-                  </form>
-                </div>
+
               </div>
 
               <div className="mt-48 pt-32 border-t border-zinc-900">
