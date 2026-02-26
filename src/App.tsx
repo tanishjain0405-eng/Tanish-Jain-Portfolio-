@@ -937,11 +937,12 @@ export default function App() {
             <Section>
               <div className="mb-24">
                 <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Structured Skill Reinforcement
+                  Across finance, modeling, and technical analysis, the objective remains consistent:
+                  Build institutional depth.
                 </h1>
                 <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                  Certifications are not identity. 
-                  They are reinforcement layers — strengthening financial, analytical, and technical depth to support execution in high-stakes environments.
+                  I do not collect certifications for display.
+                  I build capability for leverage.
                 </p>
               </div>
 
