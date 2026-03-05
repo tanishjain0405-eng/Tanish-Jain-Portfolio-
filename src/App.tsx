@@ -71,7 +71,6 @@ export default function App() {
       company: "ARHAM SHARE PRIVATE LIMITED",
       role: "Junior Technical Analyst",
       period: "May 2024 – June 2024",
-      tagline: "Structured risk–reward analysis in volatile equity markets.",
       context: "Operated in a live market environment where timing and conviction directly influenced capital outcomes.",
       whatIDid: [
         "Designed structured research frameworks across tracked assets",
@@ -95,7 +94,6 @@ export default function App() {
       company: "VENTURE CATALYSTS ACCELERATOR LLP",
       role: "Junior Investment Analyst",
       period: "May 2023 – June 2023",
-      tagline: "Early-stage venture screening and term sheet contribution.",
       context: "Exposure to startup evaluation and capital deployment decisions in early-stage environments.",
       whatIDid: [
         "Evaluated 15+ early-stage startups across industries",
@@ -114,29 +112,6 @@ export default function App() {
         "Assumption stress-testing.",
         "Capital discipline.",
         "Narrative-to-numbers translation."
-      ]
-    },
-    {
-      company: "STUDENT INVESTMENT FUND — CHRIST UNIVERSITY",
-      role: "Contributor",
-      period: "Ongoing",
-      tagline: "Structured equity exposure and volatility analysis.",
-      context: "Participated in equity market analysis within academic-investment environment.",
-      whatIDid: [
-        "Conducted regression and time-series modeling",
-        "Analyzed sectoral impact on NIFTY50 volatility",
-        "Studied cross-sector spillover effects",
-        "Evaluated downside risk transmission patterns"
-      ],
-      impact: [
-        "Identified Banking sector as primary volatility driver",
-        "Translated findings into capital allocation insights",
-        "Strengthened portfolio construction logic"
-      ],
-      strengthened: [
-        "Data-backed decision-making.",
-        "Quantitative reasoning.",
-        "System-level pattern recognition."
       ]
     }
   ];
@@ -1068,16 +1043,6 @@ export default function App() {
             className="pt-48 pb-32"
           >
             <Section>
-              <div className="mb-24">
-                <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Execution Under<br />Measurable Stakes
-                </h1>
-                <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                  I’ve intentionally placed myself in environments where decisions influence capital, growth, or strategic direction. 
-                  Below are structured summaries of that exposure.
-                </p>
-              </div>
-
               <div className="space-y-4">
                 {experiences.map((exp, i) => (
                   <div key={i} className="border-t border-zinc-900">
@@ -1133,16 +1098,6 @@ export default function App() {
                                 <ul className="space-y-3">
                                   {exp.impact.map((item, idx) => (
                                     <li key={idx} className="flex gap-4 text-white font-medium">
-                                      <span className="text-zinc-700">•</span> {item}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-                              <div>
-                                <h3 className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-4">What It Strengthened</h3>
-                                <ul className="space-y-3">
-                                  {exp.strengthened.map((item, idx) => (
-                                    <li key={idx} className="flex gap-4 text-zinc-500 italic">
                                       <span className="text-zinc-700">•</span> {item}
                                     </li>
                                   ))}
