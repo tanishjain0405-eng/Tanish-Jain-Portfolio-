@@ -279,28 +279,158 @@ export default function App() {
             <div className="w-2 h-2 bg-white rounded-full" />
             TANISH JAIN
           </button>
+          
+          {/* Desktop Navigation - Hidden on mobile */}
+          <div className="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest">
+            <button onClick={() => navigateTo('home')} className={`${view === 'home' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Home</button>
+            <button onClick={() => navigateTo('about')} className={`${view === 'about' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>About</button>
+            <button onClick={() => navigateTo('experience')} className={`${view === 'experience' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Experience</button>
+            <button onClick={() => navigateTo('projects')} className={`${view === 'projects' || view === 'projectDetail' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Projects</button>
+            <button onClick={() => navigateTo('activities')} className={`${view === 'activities' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Activities</button>
+            <button onClick={() => navigateTo('certifications')} className={`${view === 'certifications' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Certifications</button>
+            <button onClick={() => navigateTo('contact')} className={`${view === 'contact' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Contact</button>
+          </div>
 
-              <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>I'm driven by a simple curiosity: how things actually work beneath the surface.
-Whether it's a business model, a market shift, or a strategic decision, I'm interested in understanding the mechanisms that shape outcomes — the incentives, constraints, and trade-offs that rarely show up on slides but ultimately determine whether ideas succeed or fail.</p>
+          {/* Hamburger Menu Button - Visible on mobile */}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-white hover:opacity-80 transition-opacity"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
 
-                  <p>I've never believed that growth follows a straight line. In most meaningful careers, progress compounds quietly through curiosity, mistakes, reflection, and the patience to stay with complex problems longer than most people are comfortable with. That process of persistence — of returning to problems, questioning assumptions, and refining thinking over time — is something I've come to value deeply.</p>
-
-                  <p>My work and interests sit at the intersection of strategy, finance, and problem-solving. I enjoy taking complex or ambiguous situations and breaking them down into structured thinking. Sometimes that means analyzing business models, sometimes exploring financial dynamics, and sometimes simply asking better questions that reveal what truly drives outcomes.</p>
-
-                  <p>What excites me most is the process of turning ambiguity into clarity.</p>
-
-                  <p>I care about fundamentals — about understanding how companies actually create value, how markets behave under pressure, and how strategic decisions unfold in the real world. I'm drawn to environments where thinking deeply matters, where assumptions are challenged, and where decisions carry real consequences.</p>
-
-                  <p>Along the way, I've explored investing, financial analysis, venture evaluation, and business strategy. The common thread across these experiences is simple: learning continuously and building things that make sense.</p>
-
-                  <p>I believe good thinking lives somewhere between discipline and intuition — between numbers and narrative, between ambition and perspective. Logic without context is incomplete, and growth without grounding can become fragile.</p>
-
-                  <p>Today, I'm focused on strengthening that balance: developing deeper financial insight, sharpening strategic reasoning, and learning how thoughtful execution turns ideas into durable systems.</p>
-
-                  <p>This space is where I share the work, ideas, and explorations shaping how I think about business, strategy, finance, and building meaningful things in a complex world.</p>
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden border-t border-white/5 bg-black/80 backdrop-blur-md"
+              onClick={(e) => {
+                // Close menu only if clicking outside the menu content
+                if (e.target === e.currentTarget) {
+                  setMobileMenuOpen(false);
+                }
+              }}
+            >
+              <div className="px-6 py-4 flex flex-col gap-4 text-xs font-mono uppercase tracking-widest">
+                <button 
+                  onClick={() => navigateTo('home')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'home' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Home
+                </button>
+                <button 
+                  onClick={() => navigateTo('about')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'about' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => navigateTo('experience')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'experience' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Experience
+                </button>
+                <button 
+                  onClick={() => navigateTo('projects')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'projects' || view === 'projectDetail' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Projects
+                </button>
+                <button 
+                  onClick={() => navigateTo('activities')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'activities' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Activities
+                </button>
+                <button 
+                  onClick={() => navigateTo('certifications')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'certifications' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Certifications
+                </button>
+                <button 
+                  onClick={() => navigateTo('contact')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'contact' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Contact
+                </button>
               </div>
-</Section>
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </nav>
+
+      <AnimatePresence mode="wait">
+        {view === 'home' ? (
+          <motion.div
+            key="home"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.5 }}
+          >
+            {/* Hero Section */}
+            <Section className="pt-48 pb-32">
+              <div className="grid lg:grid-cols-2 gap-16 items-center">
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.8, ease: "easeOut" }}
+                >
+                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-white tracking-tighter leading-[0.9] mb-12">
+                    Structured Thinking.<br />
+                    Commercial Execution.<br />
+                    Measurable Outcomes.
+                  </h1>
+                  <p className="text-xl md:text-2xl text-zinc-400 max-w-xl leading-relaxed mb-12">
+                    I operate at the intersection of finance, strategy, and execution — 
+                    building leverage in environments where decisions carry weight.
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <button 
+                      onClick={() => navigateTo('experience')}
+                      className="px-8 py-4 bg-white text-black font-medium rounded-full flex items-center gap-2 hover:bg-zinc-200 transition-all group"
+                    >
+                      View Experience <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </button>
+                    <button 
+                      onClick={() => navigateTo('projects')}
+                      className="px-8 py-4 border border-zinc-800 text-white font-medium rounded-full hover:bg-zinc-900 transition-all"
+                    >
+                      Explore Projects
+                    </button>
+                  </div>
+                </motion.div>
+
+                <motion.div
+                  initial={{ opacity: 0, scale: 0.95 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ duration: 1, delay: 0.2 }}
+                  className="relative aspect-[3/4] w-full max-w-md mx-auto lg:mx-0"
+                >
+                  <div className="absolute inset-0 border border-zinc-800 rounded-2xl -m-4 z-0" />
+                  <div className="relative z-10 w-full h-full overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800">
+                    <img 
+                      src="/file.svg" 
+                      alt="Profile" 
+                      className="w-full h-full object-cover transition-all duration-700"
+                      referrerPolicy="no-referrer"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                    <div className="absolute bottom-6 left-6">
+                      <div className="text-xs font-mono text-white/50 uppercase tracking-[0.3em] mb-1">Principal</div>
+                      <div className="text-lg font-medium text-white tracking-tight">Strategic Execution</div>
+                    </div>
+                  </div>
+                </motion.div>
+              </div>
+            </Section>
 
             {/* Section 2 — The Through-Line */}
             <div className="bg-zinc-950 border-y border-zinc-900">
