@@ -941,12 +941,7 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="sticky p-10 border border-zinc-900 rounded-2xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
-                    style={{
-                      top: `${i * 20}px`,
-                      zIndex: 10 + i,
-                      transform: `scale(${1 - i * 0.02})`
-                    }}
+                    className="p-10 border border-zinc-900 rounded-2xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
                   >
                     <div className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-6">0{i + 1}</div>
                     <h2 className="text-2xl font-medium text-white mb-2">{activity.title}</h2>
@@ -1019,12 +1014,7 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="sticky p-8 border border-zinc-900 rounded-xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
-                    style={{
-                      top: `${i * 20}px`,
-                      zIndex: 10 + i,
-                      transform: `scale(${1 - i * 0.02})`
-                    }}
+                    className="p-8 border border-zinc-900 rounded-xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
                   >
                     <div className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-3">0{i + 1}</div>
                     <h3 className="text-lg font-medium text-white mb-3">{cert.title}</h3>
