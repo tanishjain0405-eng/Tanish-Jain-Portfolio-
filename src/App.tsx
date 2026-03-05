@@ -878,14 +878,8 @@ export default function App() {
             <Section>
               <div className="mb-24">
                 <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Signals Beyond Resume
+                  Performance is a habit. Not a mood.
                 </h1>
-                <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                  Performance is not built only in offices. 
-                  Discipline, negotiation, resilience, and accountability are shaped in competitive, institutional, and service environments.
-                  <br /><br />
-                  These experiences reflect that layer.
-                </p>
               </div>
 
               <div className="grid md:grid-cols-2 gap-12">
@@ -979,19 +973,7 @@ export default function App() {
                 ))}
               </div>
 
-              <div className="mt-32 pt-32 border-t border-zinc-900">
-                <div className="max-w-3xl">
-                  <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-600 mb-12">Personal Operating Standards</h2>
-                  <div className="space-y-12">
-                    <p className="text-2xl text-zinc-400 leading-tight">
-                      Across environments — competitive, institutional, or service — my internal standard remains consistent:
-                    </p>
-                    <div className="grid grid-cols-2 gap-8">
-                      {["Show up prepared", "Close what I commit to", "Compete with composure", "Improve through feedback"].map((standard, i) => (
-                        <div key={i} className="flex items-center gap-4 text-white font-medium">
-                          <ChevronRight className="w-4 h-4 text-zinc-700" /> {standard}
-                        </div>
-                      ))}
+              ))}
                     </div>
                     <div className="pt-12">
                       <p className="text-4xl md:text-5xl text-white font-medium tracking-tighter">
@@ -1016,13 +998,8 @@ export default function App() {
             <Section>
               <div className="mb-24">
                 <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Across finance, modeling, and technical analysis, the objective remains consistent:
-                  Build institutional depth.
+                  Across certifications objective remains consistent: Build institutional depth
                 </h1>
-                <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                  I do not collect certifications for display.
-                  I build capability for leverage.
-                </p>
               </div>
 
               <div className="max-w-4xl space-y-1">
@@ -1165,12 +1142,7 @@ export default function App() {
 
               </div>
 
-              <div className="mt-48 pt-32 border-t border-zinc-900">
-                <p className="text-5xl md:text-8xl text-white font-medium tracking-tighter leading-none">
-                  Reputation compounds.<br />
-                  <span className="text-zinc-700 italic">So does leverage.</span>
-                </p>
-              </div>
+              
             </Section>
           </motion.div>
         ) : (
