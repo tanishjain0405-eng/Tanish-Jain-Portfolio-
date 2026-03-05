@@ -444,54 +444,26 @@ Whether it's a business model, a market shift, or a strategic decision, I'm inte
                 <ArrowLeft className="w-4 h-4" /> Back to Home
               </button>
 
-              <AboutSection title="Origin">
-                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>I didn't start with a title in mind. I started with a question:</p>
-                  <p className="text-2xl md:text-3xl text-white font-medium italic">"Why do some decisions compound while others collapse?"</p>
-                  <p className="mt-12">My curiosity was never about finance or entrepreneurship as labels. It was about systems — how incentives shape behavior, how capital moves, how structure determines survival.</p>
-                  <p className="mt-8">Markets taught me discipline. Venture evaluation taught me that assumptions kill faster than competition. Building early-stage ventures taught me that momentum without economics is fragility.</p>
-                </div>
-              </AboutSection>
+              <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
+                  <p>I'm driven by a simple curiosity: how things actually work beneath the surface.
+Whether it's a business model, a market shift, or a strategic decision, I'm interested in understanding the mechanisms that shape outcomes — the incentives, constraints, and trade-offs that rarely show up on slides but ultimately determine whether ideas succeed or fail.</p>
 
-              <AboutSection title="The Pattern I Keep Noticing">
-                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>Across trading, startup screening, strategy competitions, and early builds — one pattern repeated:</p>
-                  <p className="text-3xl md:text-4xl text-white font-medium tracking-tight">Most failures are structural.</p>
-                  <ul className="space-y-4 mt-8">
-                    <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Incentives misaligned</li>
-                    <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Unit economics ignored</li>
-                    <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Growth pursued before stability</li>
-                  </ul>
-                  <p className="mt-12">I stopped asking "Will this work?" I started asking:</p>
-                  <div className="pt-8 border-t border-zinc-900">
-                    <div className="grid md:grid-cols-2 gap-8 text-white font-medium mt-8">
-                      <p>What must go right?</p>
-                      <p>What breaks first?</p>
-                      <p>Where is the leverage?</p>
-                    </div>
-                  </div>
-                </div>
-              </AboutSection>
+                  <p>I've never believed that growth follows a straight line. In most meaningful careers, progress compounds quietly through curiosity, mistakes, reflection, and the patience to stay with complex problems longer than most people are comfortable with. That process of persistence — of returning to problems, questioning assumptions, and refining thinking over time — is something I've come to value deeply.</p>
 
-              <AboutSection title="What Drives Me">
-                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>I am not motivated by activity. I am motivated by control through competence.</p>
-                  <p className="mt-12">Constraint forces prioritization. Pressure exposes weak thinking. That is where I perform best.</p>
-                </div>
-              </AboutSection>
+                  <p>My work and interests sit at the intersection of strategy, finance, and problem-solving. I enjoy taking complex or ambiguous situations and breaking them down into structured thinking. Sometimes that means analyzing business models, sometimes exploring financial dynamics, and sometimes simply asking better questions that reveal what truly drives outcomes.</p>
 
-              <AboutSection title="My Philosophy">
-                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>Capital amplifies structure — in weak systems, it only hides fragility. Growth should follow strength, not ego. Risk is calibrated, not avoided. Strategy without execution is theory. Execution without structure is waste.</p>
-                </div>
-              </AboutSection>
+                  <p>What excites me most is the process of turning ambiguity into clarity.</p>
 
-              <AboutSection title="Where I'm Headed">
-                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>Intentionally compounding across financial depth, strategic structuring, and AI-assisted leverage. Long-term, I aim to build and control scalable systems — not participate in them passively.</p>
-                  <p>I am not in a rush to claim titles. I am in the phase of earning leverage.</p>
-                </div>
-              </AboutSection>
+                  <p>I care about fundamentals — about understanding how companies actually create value, how markets behave under pressure, and how strategic decisions unfold in the real world. I'm drawn to environments where thinking deeply matters, where assumptions are challenged, and where decisions carry real consequences.</p>
+
+                  <p>Along the way, I've explored investing, financial analysis, venture evaluation, and business strategy. The common thread across these experiences is simple: learning continuously and building things that make sense.</p>
+
+                  <p>I believe good thinking lives somewhere between discipline and intuition — between numbers and narrative, between ambition and perspective. Logic without context is incomplete, and growth without grounding can become fragile.</p>
+
+                  <p>Today, I'm focused on strengthening that balance: developing deeper financial insight, sharpening strategic reasoning, and learning how thoughtful execution turns ideas into durable systems.</p>
+
+                  <p>This space is where I share the work, ideas, and explorations shaping how I think about business, strategy, finance, and building meaningful things in a complex world.</p>
+              </div>
 
             </Section>
           </motion.div>
