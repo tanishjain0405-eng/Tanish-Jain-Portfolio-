@@ -972,18 +972,6 @@ export default function App() {
                   </motion.div>
                 ))}
               </div>
-
-              ))}
-                    </div>
-                    <div className="pt-12">
-                      <p className="text-4xl md:text-5xl text-white font-medium tracking-tighter">
-                        Performance is a habit.<br />
-                        <span className="text-zinc-700 italic">Not a mood.</span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
             </Section>
           </motion.div>
         ) : view === 'certifications' ? (
@@ -1082,26 +1070,7 @@ export default function App() {
                 <h1 className="text-5xl md:text-8xl font-medium text-white tracking-tighter leading-[0.9] mb-12">
                   Let’s Build Something<br />That Compounds.
                 </h1>
-                <div className="max-w-2xl space-y-8 text-xl text-zinc-400 leading-relaxed">
-                  <p>I am open to roles and conversations in environments where:</p>
-                  <ul className="space-y-4">
-                    <li className="flex items-start gap-4 text-white font-medium">
-                      <div className="w-1.5 h-1.5 bg-zinc-700 rounded-full mt-2.5 shrink-0" />
-                      Decisions carry measurable stakes
-                    </li>
-                    <li className="flex items-start gap-4 text-white font-medium">
-                      <div className="w-1.5 h-1.5 bg-zinc-700 rounded-full mt-2.5 shrink-0" />
-                      Execution matters more than optics
-                    </li>
-                    <li className="flex items-start gap-4 text-white font-medium">
-                      <div className="w-1.5 h-1.5 bg-zinc-700 rounded-full mt-2.5 shrink-0" />
-                      Capital, growth, and structure intersect
-                    </li>
-                  </ul>
-                  <p className="pt-8">
-                    If you’re building with discipline — and need someone who can translate clarity into execution — I’m open to a serious conversation.
-                  </p>
-                </div>
+                
               </div>
 
               <div className="grid lg:grid-cols-2 gap-24 items-start">
