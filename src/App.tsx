@@ -1110,28 +1110,6 @@ export default function App() {
                   </div>
                 ))}
               </div>
-
-              <div className="mt-32 pt-32 border-t border-zinc-900">
-                <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-600 mb-12">Operating Lens</h2>
-                <div className="max-w-3xl space-y-8">
-                  <p className="text-2xl text-zinc-400">Across roles, my orientation has remained consistent:</p>
-                  <div className="grid md:grid-cols-2 gap-8">
-                    <div className="flex items-start gap-4 text-white font-medium">
-                      <ChevronRight className="w-5 h-5 text-zinc-700 mt-1" /> Break complexity into structured drivers
-                    </div>
-                    <div className="flex items-start gap-4 text-white font-medium">
-                      <ChevronRight className="w-5 h-5 text-zinc-700 mt-1" /> Validate assumptions before committing capital
-                    </div>
-                    <div className="flex items-start gap-4 text-white font-medium">
-                      <ChevronRight className="w-5 h-5 text-zinc-700 mt-1" /> Align execution with measurable outcomes
-                    </div>
-                    <div className="flex items-start gap-4 text-white font-medium">
-                      <ChevronRight className="w-5 h-5 text-zinc-700 mt-1" /> Prioritize leverage over activity
-                    </div>
-                  </div>
-                  <p className="pt-8 text-xl text-white font-medium italic">I am comfortable operating where performance is visible.</p>
-                </div>
-              </div>
             </Section>
           </motion.div>
         )}
