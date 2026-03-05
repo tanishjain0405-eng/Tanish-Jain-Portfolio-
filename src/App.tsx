@@ -882,23 +882,94 @@ export default function App() {
                 </h1>
               </div>
 
-              <div className="max-w-4xl mx-auto space-y-0">
+              <div className="grid md:grid-cols-2 gap-12">
                 {[
-                  { title: "Sponsorship Negotiation & Capital Raising" },
-                  { title: "Competitive Sports" },
-                  { title: "Student Investment Fund Contributor" },
-                  { title: "Youth Mentorship & Educational Sessions" }
+                  {
+                    title: "Sponsorship Negotiation & Capital Raising",
+                    subtitle: "Raised ₹60K for University Business Fest",
+                    context: "University event required structured corporate sponsorship and deliverable alignment.",
+                    whatIDid: [
+                      "Identified potential sponsors",
+                      "Structured value proposition",
+                      "Negotiated deliverables",
+                      "Managed execution accountability"
+                    ],
+                    outcome: "₹60K raised in sponsorship capital. Delivered commitments with institutional reliability.",
+                    signals: "Selling is alignment — not pressure. Capital follows structured value. Negotiation requires preparation, not volume."
+                  },
+                  {
+                    title: "Competitive Sports",
+                    subtitle: "Football (State Representation – Gujarat) | District-Level Badminton & Chess",
+                    context: "Participated in competitive team and individual sports environments.",
+                    whatIDid: [
+                      "Performance under pressure",
+                      "Discipline in preparation",
+                      "Accountability within team systems",
+                      "Strategic thinking in fast-moving situations"
+                    ],
+                    outcome: "State and District level representation across multiple disciplines.",
+                    signals: "I am comfortable in performance-based environments. Competition sharpens clarity."
+                  },
+                  {
+                    title: "Student Investment Fund Contributor",
+                    subtitle: "Equity Exposure & Structured Market Analysis",
+                    context: "Participated in institutional-level equity discussions and structured capital evaluation.",
+                    whatIDid: [
+                      "Data-backed reasoning",
+                      "Collaborative decision framing",
+                      "Volatility analysis discipline"
+                    ],
+                    outcome: "Active contribution to fund strategy and sectoral analysis.",
+                    signals: "Early exposure to capital logic. Comfort with measurable stakes."
+                  },
+                  {
+                    title: "Youth Mentorship & Educational Sessions",
+                    subtitle: "Vatsalyapuram Orphanage",
+                    context: "Organized finance and structured learning sessions for youth programs.",
+                    whatIDid: [
+                      "Patience in communication",
+                      "Simplification of complex ideas",
+                      "Responsibility beyond performance environments"
+                    ],
+                    outcome: "Successful delivery of financial literacy programs for youth.",
+                    signals: "Ambition without grounding is unstable. Contribution builds character."
+                  }
                 ].map((activity, i) => (
-                  <div key={i} className="h-[20rem]">
-                    <div
-                      className="sticky top-20 md:top-24 flex items-center justify-center"
-                      style={{ zIndex: 100 + i }}
-                    >
-                      <div className="bg-zinc-900 p-10 rounded-2xl shadow-xl transform transition-all">
-                        <h2 className="text-2xl font-medium text-white">{activity.title}</h2>
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="p-10 border border-zinc-900 rounded-2xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
+                  >
+                    <div className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-6">0{i + 1}</div>
+                    <h2 className="text-2xl font-medium text-white mb-2">{activity.title}</h2>
+                    <div className="text-sm text-zinc-500 mb-8">{activity.subtitle}</div>
+                    
+                    <div className="space-y-8">
+                      <div>
+                        <h3 className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">Context</h3>
+                        <p className="text-zinc-400 text-sm leading-relaxed">{activity.context}</p>
+                      </div>
+                      
+                      <div>
+                        <h3 className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">What I Did / Built</h3>
+                        <ul className="space-y-2">
+                          {activity.whatIDid.map((item, idx) => (
+                            <li key={idx} className="text-zinc-300 text-sm flex gap-3">
+                              <span className="text-zinc-700">•</span> {item}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+
+                      <div className="pt-6 border-t border-zinc-900">
+                        <h3 className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">What This Signals</h3>
+                        <p className="text-zinc-400 text-sm italic leading-relaxed">{activity.signals}</p>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
             </Section>
@@ -919,25 +990,66 @@ export default function App() {
                 </h1>
               </div>
 
-              <div className="max-w-4xl mx-auto space-y-0">
+              <div className="max-w-4xl space-y-1">
                 {[
-                  { title: "Financial Modeling & Valuation", issuer: "The Wall Street School" },
-                  { title: "Fundamental Analysis", issuer: "CA Rachna Ranade" },
-                  { title: "Technical Analysis", issuer: "Mukul Agarwal" },
-                  { title: "MS Excel (Advanced)", issuer: "Udemy" },
-                  { title: "Bloomberg Terminal Exposure", issuer: "Institutional Access" }
+                  {
+                    title: "Financial Modeling & Valuation",
+                    issuer: "The Wall Street School",
+                    relevance: "Built institutional-grade financial modeling capability — including DCF, scenario modeling, valuation logic, and capital structure sensitivity.",
+                    strengthened: "Strengthened ability to stress-test assumptions and evaluate downside–upside asymmetry."
+                  },
+                  {
+                    title: "Fundamental Analysis",
+                    issuer: "CA Rachna Ranade",
+                    relevance: "Enhanced structured equity research capability — focusing on financial statements, margin evaluation, and long-term business viability.",
+                    strengthened: "Strengthened narrative-to-numbers translation."
+                  },
+                  {
+                    title: "Technical Analysis",
+                    issuer: "Mukul Agarwal",
+                    relevance: "Improved market timing discipline, signal validation logic, and probability framing in volatile environments.",
+                    strengthened: "Reinforced structured risk–reward calibration."
+                  },
+                  {
+                    title: "MS Excel (Advanced)",
+                    issuer: "Udemy",
+                    relevance: "Strengthened analytical efficiency through advanced formulas, data structuring, financial modeling speed, and dashboard logic.",
+                    strengthened: "Execution leverage through technical precision."
+                  },
+                  {
+                    title: "Bloomberg Terminal Exposure",
+                    issuer: "Institutional Access",
+                    relevance: "Improved real-time market data analysis, equity screening capability, and macro-sector monitoring.",
+                    strengthened: "Enhanced capital decision awareness."
+                  }
                 ].map((cert, i) => (
-                  <div key={i} className="h-[20rem]">
-                    <div
-                      className="sticky top-20 md:top-24 flex items-center justify-center"
-                      style={{ zIndex: 100 + i }}
-                    >
-                      <div className="bg-zinc-900 p-10 rounded-2xl shadow-xl transform transition-all">
-                        <h2 className="text-2xl font-medium text-white">{cert.title}</h2>
-                        <div className="text-sm text-zinc-400 mt-2">{cert.issuer}</div>
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 10 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="py-12 border-t border-zinc-900 first:border-t-0 group"
+                  >
+                    <div className="grid md:grid-cols-3 gap-8 items-start">
+                      <div>
+                        <h2 className="text-2xl font-medium text-white mb-2">{cert.title}</h2>
+                        <div className="text-sm font-mono text-zinc-600 uppercase tracking-widest">{cert.issuer}</div>
+                      </div>
+                      <div className="md:col-span-2 space-y-4">
+                        <div>
+                          <h3 className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest mb-2">Relevance</h3>
+                          <p className="text-zinc-400 leading-relaxed">{cert.relevance}</p>
+                        </div>
+                        <p className="text-zinc-500 italic text-sm">{cert.strengthened}</p>
+                        <div className="pt-4">
+                          <button className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
+                            View Credential <ArrowRight className="w-3 h-3" />
+                          </button>
+                        </div>
                       </div>
                     </div>
-                  </div>
+                  </motion.div>
                 ))}
               </div>
 
