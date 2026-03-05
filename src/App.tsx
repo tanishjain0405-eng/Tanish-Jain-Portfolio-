@@ -1085,7 +1085,7 @@ Whether it's a business model, a market shift, or a strategic decision, I'm inte
           <div className="grid md:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-5xl md:text-7xl font-medium tracking-tighter leading-none mb-8">
-                Let's build something that matters.
+                lets build something that matters one
               </h2>
               <p className="text-xl text-zinc-600 mb-12">
                 If you’re building in an environment where clarity, execution, and discipline are the primary drivers — let’s connect.
