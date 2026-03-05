@@ -941,7 +941,12 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="p-10 border border-zinc-900 rounded-2xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
+                    className="sticky p-10 border border-zinc-900 rounded-2xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
+                    style={{
+                      top: `${i * 20}px`,
+                      zIndex: 10 + i,
+                      transform: `scale(${1 - i * 0.02})`
+                    }}
                   >
                     <div className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-6">0{i + 1}</div>
                     <h2 className="text-2xl font-medium text-white mb-2">{activity.title}</h2>
@@ -962,11 +967,6 @@ export default function App() {
                             </li>
                           ))}
                         </ul>
-                      </div>
-
-                      <div className="pt-6 border-t border-zinc-900">
-                        <h3 className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest mb-3">What This Signals</h3>
-                        <p className="text-zinc-400 text-sm italic leading-relaxed">{activity.signals}</p>
                       </div>
                     </div>
                   </motion.div>
@@ -990,37 +990,27 @@ export default function App() {
                 </h1>
               </div>
 
-              <div className="max-w-4xl space-y-1">
+              <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {[
                   {
                     title: "Financial Modeling & Valuation",
-                    issuer: "The Wall Street School",
-                    relevance: "Built institutional-grade financial modeling capability — including DCF, scenario modeling, valuation logic, and capital structure sensitivity.",
-                    strengthened: "Strengthened ability to stress-test assumptions and evaluate downside–upside asymmetry."
+                    issuer: "The Wall Street School"
                   },
                   {
                     title: "Fundamental Analysis",
-                    issuer: "CA Rachna Ranade",
-                    relevance: "Enhanced structured equity research capability — focusing on financial statements, margin evaluation, and long-term business viability.",
-                    strengthened: "Strengthened narrative-to-numbers translation."
+                    issuer: "CA Rachna Ranade"
                   },
                   {
                     title: "Technical Analysis",
-                    issuer: "Mukul Agarwal",
-                    relevance: "Improved market timing discipline, signal validation logic, and probability framing in volatile environments.",
-                    strengthened: "Reinforced structured risk–reward calibration."
+                    issuer: "Mukul Agarwal"
                   },
                   {
                     title: "MS Excel (Advanced)",
-                    issuer: "Udemy",
-                    relevance: "Strengthened analytical efficiency through advanced formulas, data structuring, financial modeling speed, and dashboard logic.",
-                    strengthened: "Execution leverage through technical precision."
+                    issuer: "Udemy"
                   },
                   {
                     title: "Bloomberg Terminal Exposure",
-                    issuer: "Institutional Access",
-                    relevance: "Improved real-time market data analysis, equity screening capability, and macro-sector monitoring.",
-                    strengthened: "Enhanced capital decision awareness."
+                    issuer: "Institutional Access"
                   }
                 ].map((cert, i) => (
                   <motion.div
@@ -1029,26 +1019,16 @@ export default function App() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ delay: i * 0.1 }}
-                    className="py-12 border-t border-zinc-900 first:border-t-0 group"
+                    className="sticky p-8 border border-zinc-900 rounded-xl bg-zinc-950/20 hover:border-zinc-800 transition-all"
+                    style={{
+                      top: `${i * 20}px`,
+                      zIndex: 10 + i,
+                      transform: `scale(${1 - i * 0.02})`
+                    }}
                   >
-                    <div className="grid md:grid-cols-3 gap-8 items-start">
-                      <div>
-                        <h2 className="text-2xl font-medium text-white mb-2">{cert.title}</h2>
-                        <div className="text-sm font-mono text-zinc-600 uppercase tracking-widest">{cert.issuer}</div>
-                      </div>
-                      <div className="md:col-span-2 space-y-4">
-                        <div>
-                          <h3 className="text-[10px] font-mono text-zinc-700 uppercase tracking-widest mb-2">Relevance</h3>
-                          <p className="text-zinc-400 leading-relaxed">{cert.relevance}</p>
-                        </div>
-                        <p className="text-zinc-500 italic text-sm">{cert.strengthened}</p>
-                        <div className="pt-4">
-                          <button className="text-[10px] font-mono text-zinc-600 uppercase tracking-widest hover:text-white transition-colors flex items-center gap-2">
-                            View Credential <ArrowRight className="w-3 h-3" />
-                          </button>
-                        </div>
-                      </div>
-                    </div>
+                    <div className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-3">0{i + 1}</div>
+                    <h3 className="text-lg font-medium text-white mb-3">{cert.title}</h3>
+                    <div className="text-sm font-mono text-zinc-500 uppercase tracking-widest">{cert.issuer}</div>
                   </motion.div>
                 ))}
               </div>
