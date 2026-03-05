@@ -744,17 +744,6 @@ export default function App() {
             className="pt-48 pb-32"
           >
             <Section>
-              <div className="mb-24">
-                <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Structured Thinking.<br />Applied.
-                </h1>
-                <p className="text-xl text-zinc-400 max-w-2xl leading-relaxed">
-                  These projects represent 0→1 builds, strategic modeling, growth experimentation, and research-backed analysis across finance, consumer, and digital environments.
-                  <br /><br />
-                  Each project is presented as a structured brief — not a summary.
-                </p>
-              </div>
-
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
                 {projects.map((project, i) => (
                   <motion.div
@@ -773,7 +762,7 @@ export default function App() {
                       onClick={() => navigateTo('projectDetail', project.id)}
                       className="text-white font-medium flex items-center gap-2 group-hover:gap-4 transition-all"
                     >
-                      View Case Study <ArrowRight className="w-4 h-4" />
+                      View More <ArrowRight className="w-4 h-4" />
                     </button>
                   </motion.div>
                 ))}
@@ -827,7 +816,7 @@ export default function App() {
                 </div>
 
                 <div className="space-y-24">
-                  <div className="p-8 bg-zinc-950 border border-zinc-900 rounded-2xl">
+                  <div className="p-8 border border-zinc-900 rounded-2xl">
                     <h2 className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-8">Results</h2>
                     <ul className="space-y-4">
                       {projects[selectedProject].results.map((result, idx) => (
@@ -838,21 +827,6 @@ export default function App() {
                       ))}
                     </ul>
                   </div>
-
-                  <div className="p-8 border border-zinc-900 rounded-2xl">
-                    <h2 className="text-xs font-mono text-zinc-600 uppercase tracking-widest mb-8">What This Demonstrated</h2>
-                    <ul className="space-y-4">
-                      {projects[selectedProject].demonstrated.map((item, idx) => (
-                        <li key={idx} className="text-zinc-400 italic">
-                          {item}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <button className="w-full py-4 border border-zinc-800 text-zinc-500 font-mono text-xs uppercase tracking-widest rounded-xl hover:bg-zinc-900 hover:text-white transition-all flex items-center justify-center gap-2">
-                    <Download className="w-3 h-3" /> Export Case Brief (PDF)
-                  </button>
                 </div>
               </div>
 
