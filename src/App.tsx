@@ -1057,7 +1057,6 @@ export default function App() {
                         <h2 className="text-2xl md:text-3xl font-medium text-white group-hover:text-zinc-400 transition-colors mb-4">
                           {exp.company}
                         </h2>
-                        <p className="text-zinc-500">{exp.tagline}</p>
                       </div>
                       <div className="mt-8 md:mt-0">
                         <div className={`w-10 h-10 rounded-full border border-zinc-800 flex items-center justify-center text-white transition-transform duration-500 ${expandedExp === i ? 'rotate-45 bg-white text-black border-white' : ''}`}>
