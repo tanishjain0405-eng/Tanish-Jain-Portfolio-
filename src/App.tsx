@@ -376,102 +376,147 @@ export default function App() {
             transition={{ duration: 0.5 }}
           >
             {/* Hero Section */}
-            <Section className="pt-48 pb-32">
-              <div className="grid lg:grid-cols-2 gap-16 items-center">
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.8, ease: "easeOut" }}
-                >
-                  <h1 className="text-6xl md:text-7xl lg:text-8xl font-medium text-white tracking-tighter leading-[0.9] mb-12">
-                    Structured Thinking.<br />
-                    Commercial Execution.<br />
-                    Measurable Outcomes.
-                  </h1>
-                  <p className="text-xl md:text-2xl text-zinc-400 max-w-xl leading-relaxed mb-12">
-                    I operate at the intersection of finance, strategy, and execution — 
-                    building leverage in environments where decisions carry weight.
-                  </p>
-                  <div className="flex flex-wrap gap-4">
-                    <button 
-                      onClick={() => navigateTo('experience')}
-                      className="px-8 py-4 bg-white text-black font-medium rounded-full flex items-center gap-2 hover:bg-zinc-200 transition-all group"
-                    >
-                      View Experience <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </button>
-                    <button 
-                      onClick={() => navigateTo('projects')}
-                      className="px-8 py-4 border border-zinc-800 text-white font-medium rounded-full hover:bg-zinc-900 transition-all"
-                    >
-                      Explore Projects
-                    </button>
-                  </div>
-                </motion.div>
-
-                <motion.div
-                  initial={{ opacity: 0, scale: 0.95 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 1, delay: 0.2 }}
-                  className="relative aspect-[3/4] w-full max-w-md mx-auto lg:mx-0"
-                >
-                  <div className="absolute inset-0 border border-zinc-800 rounded-2xl -m-4 z-0" />
-                  <div className="relative z-10 w-full h-full overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800">
-                    <img 
-                      src="/file.svg" 
-                      alt="Profile" 
-                      className="w-full h-full object-cover transition-all duration-700"
-                      referrerPolicy="no-referrer"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
-                    <div className="absolute bottom-6 left-6">
-                      <div className="text-xs font-mono text-white/50 uppercase tracking-[0.3em] mb-1">Principal</div>
-                      <div className="text-lg font-medium text-white tracking-tight">Strategic Execution</div>
-                    </div>
-                  </div>
-                </motion.div>
-              </div>
-            </Section>
-
-            {/* Section 2 — The Through-Line */}
-            <div className="bg-zinc-950 border-y border-zinc-900">
-              <Section>
-                <div className="grid md:grid-cols-2 gap-16 items-start">
+            <div className="min-h-[85vh] flex items-center">
+              <Section className="py-32">
+                <div className="grid lg:grid-cols-2 gap-16 items-center">
                   <motion.div
-                    initial={{ opacity: 0, x: -20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
+                    initial={{ opacity: 0, y: 30 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
                   >
-                    {/* Heading Removed */}
-                    <div className="text-4xl md:text-5xl text-white font-medium tracking-tight leading-tight">
-                      I was never drawn to activity.<br />
-                      <span className="text-zinc-500">I was drawn to leverage.</span>
+                    <h1 className="text-7xl md:text-8xl lg:text-9xl font-medium text-white tracking-tighter leading-[0.9] mb-12">
+                      Thinking in Systems.<br />
+                      Acting with Discipline.
+                    </h1>
+                    <p className="text-xl md:text-2xl text-zinc-400 max-w-xl leading-relaxed mb-8">
+                      I'm interested in understanding how businesses actually work — how markets behave under pressure, how strategy connects to execution, and how disciplined thinking turns complex problems into clear decisions.
+                    </p>
+                    <p className="text-lg text-zinc-500 mb-12">
+                      My work sits at the intersection of strategy, finance, and business problem-solving.
+                    </p>
+                    <div className="flex flex-wrap gap-4 mb-8">
+                      <button
+                        onClick={() => navigateTo('experience')}
+                        className="px-8 py-4 bg-white text-black font-medium rounded-full flex items-center gap-2 hover:bg-zinc-200 transition-all group"
+                      >
+                        Explore My Work <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                      </button>
+                      <button
+                        className="px-8 py-4 border border-zinc-800 text-white font-medium rounded-full hover:bg-zinc-900 transition-all"
+                      >
+                        Download Resume
+                      </button>
                     </div>
+                    <p className="text-sm text-zinc-600">
+                      Currently exploring strategy, investing, and founder-driven environments.
+                    </p>
                   </motion.div>
+
                   <motion.div
-                    initial={{ opacity: 0, x: 20 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    className="space-y-8 text-lg leading-relaxed text-zinc-400"
+                    initial={{ opacity: 0, scale: 0.95 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 1, delay: 0.2 }}
+                    className="relative aspect-[3/4] w-full max-w-md mx-auto lg:mx-0 group"
                   >
-                    <p>
-                      Early exposure to markets showed me how discipline converts into returns. 
-                      Venture evaluation showed me how unchecked assumptions break companies. 
-                      Building small ventures showed me that speed without structure burns capital.
-                    </p>
-                    <p className="text-white">
-                      Across every environment — trading desks, startup screening rooms, 0→1 builds — one pattern remained constant:
-                    </p>
-                    <div className="p-8 border border-zinc-800 rounded-2xl bg-black">
-                      <div className="text-2xl text-white font-medium mb-2">Structure creates advantage.</div>
-                      <p className="text-zinc-500">I don’t optimize for noise. I optimize for clarity, incentives, and execution.</p>
+                    <div className="absolute inset-0 border border-zinc-800 rounded-2xl -m-4 z-0 group-hover:border-zinc-600 transition-colors" />
+                    <div className="relative z-10 w-full h-full overflow-hidden rounded-2xl bg-zinc-900 border border-zinc-800 group-hover:shadow-lg group-hover:shadow-zinc-900/20 transition-all duration-500">
+                      <img
+                        src="/file.svg"
+                        alt="Profile"
+                        className="w-full h-full object-cover transition-all duration-700 group-hover:scale-105"
+                        referrerPolicy="no-referrer"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
+                      <div className="absolute bottom-6 left-6">
+                        <div className="text-xs font-mono text-white/50 uppercase tracking-[0.3em] mb-1">TANISH JAIN</div>
+                        <div className="text-lg font-medium text-white tracking-tight">Strategy · Finance · Execution</div>
+                      </div>
                     </div>
                   </motion.div>
                 </div>
               </Section>
             </div>
 
-            {/* Section 3 — Snapshot Metrics */}
-            <Section>
+            {/* Section 2 — Narrative Section */}
+            <div className="bg-zinc-950 border-y border-zinc-900">
+              <Section className="py-32">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-16"
+                >
+                  <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-4">From Curiosity to Structure</h2>
+                </motion.div>
+                <div className="grid md:grid-cols-2 gap-16 items-start">
+                  <motion.div
+                    initial={{ opacity: 0, x: -20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                  >
+                    <div className="text-4xl md:text-5xl text-white font-medium tracking-tight leading-tight">
+                      I've always been curious about how things actually work beneath the surface.
+                    </div>
+                  </motion.div>
+                  <motion.div
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    className="space-y-6 text-lg leading-relaxed text-zinc-400"
+                  >
+                    <p>
+                      Whether it's a business model, a market shift, or a strategic decision, I'm interested in understanding the mechanisms that shape outcomes — the incentives, constraints, and trade-offs that determine whether ideas succeed or fail.
+                    </p>
+                    <p>
+                      Over time this curiosity evolved into a deeper interest in structured thinking: breaking complex problems into underlying drivers and turning ambiguity into clarity.
+                    </p>
+                  </motion.div>
+                </div>
+              </Section>
+            </div>
+
+            {/* Section 3 — How I Think About Problems */}
+            <Section className="py-32">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="mb-16"
+              >
+                <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-4">How I Think About Problems</h2>
+              </motion.div>
+              <div className="grid md:grid-cols-3 gap-8">
+                {[
+                  {
+                    title: "Systems First",
+                    text: "Most outcomes are shaped by underlying systems — incentives, constraints, and feedback loops."
+                  },
+                  {
+                    title: "Clarity over Complexity",
+                    text: "The goal isn't complexity. It's finding the few drivers that actually matter."
+                  },
+                  {
+                    title: "Execution Matters",
+                    text: "Ideas only matter when they translate into decisions and outcomes in the real world."
+                  }
+                ].map((item, i) => (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ delay: i * 0.1 }}
+                    className="p-8 border border-zinc-900 rounded-2xl hover:border-zinc-700 transition-colors"
+                  >
+                    <h3 className="text-xl font-medium text-white mb-4">{item.title}</h3>
+                    <p className="text-zinc-500 leading-relaxed">{item.text}</p>
+                  </motion.div>
+                ))}
+              </div>
+            </Section>
+
+            {/* Section 4 — Snapshot Metrics */}
+            <Section className="py-32">
               <div className="mb-16">
                 <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-4">Snapshot Metrics</h2>
                 <p className="text-zinc-400">Measured exposure. Real stakes. Structured outcomes.</p>
@@ -485,77 +530,128 @@ export default function App() {
               </div>
             </Section>
 
-            {/* Section 4 — What I Do */}
+            {/* Section 5 — What I Enjoy Working On */}
             <div className="bg-zinc-950 border-y border-zinc-900">
-              <Section>
-                <div className="mb-16">
-                  <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-4">What I Do</h2>
-                  <p className="text-3xl text-white font-medium">I translate ambiguity into structured execution.</p>
-                </div>
-                <div className="grid md:grid-cols-2 gap-8">
+              <Section className="py-32">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="mb-16"
+                >
+                  <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-4">What I Enjoy Working On</h2>
+                </motion.div>
+                <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
                   {[
-                    { title: "Problem Decomposition", desc: "Break down complex problems into measurable drivers", icon: <Layers className="w-5 h-5" /> },
-                    { title: "Incentive Alignment", desc: "Align incentives and execution pathways", icon: <Target className="w-5 h-5" /> },
-                    { title: "Growth Modeling", desc: "Design financially disciplined growth models", icon: <BarChart3 className="w-5 h-5" /> },
-                    { title: "Loop Closure", desc: "Close loops — not just propose ideas", icon: <Zap className="w-5 h-5" /> },
+                    {
+                      title: "Business Model Analysis",
+                      desc: "Understanding how companies create and capture value through their core operations."
+                    },
+                    {
+                      title: "Market & Strategy Research",
+                      desc: "Analyzing market dynamics, competitive positioning, and strategic opportunities."
+                    },
+                    {
+                      title: "Financial & Investment Thinking",
+                      desc: "Evaluating financial performance, valuation, and capital allocation decisions."
+                    },
+                    {
+                      title: "Early Stage Problem Solving",
+                      desc: "Helping startups navigate uncertainty and build sustainable business foundations."
+                    }
                   ].map((item, i) => (
-                    <motion.div 
+                    <motion.div
                       key={i}
                       initial={{ opacity: 0, y: 20 }}
                       whileInView={{ opacity: 1, y: 0 }}
                       viewport={{ once: true }}
                       transition={{ delay: i * 0.1 }}
-                      className="p-8 border border-zinc-900 rounded-2xl hover:border-zinc-700 transition-colors group"
+                      className="p-6 border border-zinc-900 rounded-2xl hover:border-zinc-700 transition-colors"
                     >
-                      <div className="w-10 h-10 rounded-lg bg-zinc-900 flex items-center justify-center mb-6 text-white group-hover:bg-white group-hover:text-black transition-colors">
-                        {item.icon}
-                      </div>
-                      <h3 className="text-xl font-medium text-white mb-2">{item.title}</h3>
-                      <p className="text-zinc-500">{item.desc}</p>
+                      <h3 className="text-lg font-medium text-white mb-3">{item.title}</h3>
+                      <p className="text-zinc-500 text-sm leading-relaxed">{item.desc}</p>
                     </motion.div>
                   ))}
-                </div>
-                <div className="mt-16 pt-16 border-t border-zinc-900">
-                  <p className="text-sm font-mono text-zinc-500 uppercase tracking-widest mb-8">I am comfortable in rooms where:</p>
-                  <div className="flex flex-col md:flex-row gap-8 md:gap-16">
-                    <div className="flex items-center gap-4 text-white font-medium">
-                      <ChevronRight className="text-zinc-700" /> Decisions move capital
-                    </div>
-                    <div className="flex items-center gap-4 text-white font-medium">
-                      <ChevronRight className="text-zinc-700" /> Execution determines growth
-                    </div>
-                    <div className="flex items-center gap-4 text-white font-medium">
-                      <ChevronRight className="text-zinc-700" /> Accountability is visible
-                    </div>
-                  </div>
                 </div>
               </Section>
             </div>
 
-            {/* Section 5 — Current Direction */}
-            <Section>
-              <div className="max-w-3xl">
-                <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-8">Current Direction</h2>
-                <div className="space-y-8 text-2xl md:text-3xl text-zinc-400 leading-tight">
+            {/* Section 6 — Current Direction */}
+            <Section className="py-32">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                className="max-w-4xl mx-auto text-center"
+              >
+                <h2 className="text-sm font-mono uppercase tracking-[0.3em] text-zinc-500 mb-12">Current Focus</h2>
+                <div className="space-y-8 text-xl md:text-2xl text-zinc-400 leading-relaxed">
                   <p>
-                    I am currently in a deliberate compounding phase — 
-                    deepening <span className="text-white">financial rigor</span>, 
-                    strategic <span className="text-white">problem structuring</span>, 
-                    and <span className="text-white">commercial execution</span> capability.
+                    Right now, I'm focused on strengthening three areas:
                   </p>
-                  <p>
-                    Long-term, I am building toward <span className="text-white italic">ownership</span> — 
-                    designing systems that scale and allocating capital with conviction.
-                  </p>
-                  <div className="pt-8">
-                    <p className="text-sm font-mono uppercase tracking-widest text-zinc-600 mb-4">For now, I focus on one thing:</p>
-                    <p className="text-4xl md:text-5xl text-white font-medium tracking-tighter">
-                      Becoming the person trusted with leverage.
-                    </p>
+                  <div className="flex flex-col md:flex-row justify-center gap-8 md:gap-16 text-white font-medium">
+                    <div>• Strategic thinking</div>
+                    <div>• Financial depth</div>
+                    <div>• Real-world execution experience</div>
                   </div>
+                  <p>
+                    My goal is simple: to become someone who can approach complex problems with clarity and contribute meaningfully to the environments I work in.
+                  </p>
                 </div>
-              </div>
+              </motion.div>
             </Section>
+
+            {/* Final Closing Section */}
+            <div className="bg-zinc-950 border-t border-zinc-900">
+              <Section className="py-32">
+                <motion.div
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  className="max-w-3xl mx-auto text-center"
+                >
+                  <h2 className="text-5xl md:text-6xl font-medium text-white tracking-tight leading-tight mb-8">
+                    Let's build thoughtful work.
+                  </h2>
+                  <p className="text-xl text-zinc-400 leading-relaxed mb-16">
+                    I'm always interested in conversations about strategy, finance, business building, and how ideas translate into real outcomes.
+                  </p>
+
+                  <div className="grid md:grid-cols-3 gap-8 mb-16">
+                    {[
+                      "Clarity > Noise",
+                      "Execution > Optics",
+                      "Discipline > Momentum"
+                    ].map((principle, i) => (
+                      <motion.div
+                        key={i}
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ delay: i * 0.1 }}
+                        className="text-lg font-medium text-white"
+                      >
+                        {principle}
+                      </motion.div>
+                    ))}
+                  </div>
+
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <button
+                      onClick={() => navigateTo('contact')}
+                      className="px-8 py-4 bg-white text-black font-medium rounded-full hover:bg-zinc-200 transition-all"
+                    >
+                      Get In Touch
+                    </button>
+                    <button
+                      className="px-8 py-4 border border-zinc-800 text-white font-medium rounded-full hover:bg-zinc-900 transition-all"
+                    >
+                      Download Resume
+                    </button>
+                  </div>
+                </motion.div>
+              </Section>
+            </div>
           </motion.div>
         ) : view === 'about' ? (
           <motion.div
