@@ -14,7 +14,9 @@ import {
   Mail,
   ChevronRight,
   Layers,
-  ArrowLeft
+  ArrowLeft,
+  Menu,
+  X
 } from 'lucide-react';
 
 const Section = ({ children, className = "" }: { children: React.ReactNode, className?: string }) => (
@@ -54,11 +56,13 @@ export default function App() {
   const [view, setView] = useState<'home' | 'about' | 'experience' | 'projects' | 'projectDetail' | 'activities' | 'certifications' | 'contact'>('home');
   const [expandedExp, setExpandedExp] = useState<number | null>(null);
   const [selectedProject, setSelectedProject] = useState<number | null>(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const navigateTo = (newView: 'home' | 'about' | 'experience' | 'projects' | 'projectDetail' | 'activities' | 'certifications' | 'contact', projectId?: number) => {
     setView(newView);
     if (projectId !== undefined) setSelectedProject(projectId);
     setExpandedExp(null);
+    setMobileMenuOpen(false);
     window.scrollTo(0, 0);
   };
 
@@ -300,16 +304,91 @@ export default function App() {
             <div className="w-2 h-2 bg-white rounded-full" />
             TANISH JAIN
           </button>
+          
+          {/* Desktop Navigation - Hidden on mobile */}
           <div className="hidden md:flex gap-8 text-xs font-mono uppercase tracking-widest">
-            <button onClick={() => navigateTo('home')} className={`${view === 'home' ? 'text-white' : 'hover:text-white'} transition-colors`}>Home</button>
-            <button onClick={() => navigateTo('about')} className={`${view === 'about' ? 'text-white' : 'hover:text-white'} transition-colors`}>About</button>
-            <button onClick={() => navigateTo('experience')} className={`${view === 'experience' ? 'text-white' : 'hover:text-white'} transition-colors`}>Experience</button>
-            <button onClick={() => navigateTo('projects')} className={`${view === 'projects' || view === 'projectDetail' ? 'text-white' : 'hover:text-white'} transition-colors`}>Projects</button>
-            <button onClick={() => navigateTo('activities')} className={`${view === 'activities' ? 'text-white' : 'hover:text-white'} transition-colors`}>Activities</button>
-            <button onClick={() => navigateTo('certifications')} className={`${view === 'certifications' ? 'text-white' : 'hover:text-white'} transition-colors`}>Certifications</button>
-            <button onClick={() => navigateTo('contact')} className={`${view === 'contact' ? 'text-white' : 'hover:text-white'} transition-colors`}>Contact</button>
+            <button onClick={() => navigateTo('home')} className={`${view === 'home' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Home</button>
+            <button onClick={() => navigateTo('about')} className={`${view === 'about' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>About</button>
+            <button onClick={() => navigateTo('experience')} className={`${view === 'experience' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Experience</button>
+            <button onClick={() => navigateTo('projects')} className={`${view === 'projects' || view === 'projectDetail' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Projects</button>
+            <button onClick={() => navigateTo('activities')} className={`${view === 'activities' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Activities</button>
+            <button onClick={() => navigateTo('certifications')} className={`${view === 'certifications' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Certifications</button>
+            <button onClick={() => navigateTo('contact')} className={`${view === 'contact' ? 'text-white' : 'text-zinc-400 hover:text-white'} transition-colors`}>Contact</button>
           </div>
+
+          {/* Hamburger Menu Button - Visible on mobile */}
+          <button 
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            className="md:hidden text-white hover:opacity-80 transition-opacity"
+            aria-label="Toggle menu"
+          >
+            {mobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
         </div>
+
+        {/* Mobile Menu Dropdown */}
+        <AnimatePresence>
+          {mobileMenuOpen && (
+            <motion.div
+              initial={{ opacity: 0, height: 0 }}
+              animate={{ opacity: 1, height: 'auto' }}
+              exit={{ opacity: 0, height: 0 }}
+              transition={{ duration: 0.2 }}
+              className="md:hidden border-t border-white/5 bg-black/80 backdrop-blur-md"
+              onClick={(e) => {
+                // Close menu only if clicking outside the menu content
+                if (e.target === e.currentTarget) {
+                  setMobileMenuOpen(false);
+                }
+              }}
+            >
+              <div className="px-6 py-4 flex flex-col gap-4 text-xs font-mono uppercase tracking-widest">
+                <button 
+                  onClick={() => navigateTo('home')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'home' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Home
+                </button>
+                <button 
+                  onClick={() => navigateTo('about')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'about' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  About
+                </button>
+                <button 
+                  onClick={() => navigateTo('experience')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'experience' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Experience
+                </button>
+                <button 
+                  onClick={() => navigateTo('projects')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'projects' || view === 'projectDetail' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Projects
+                </button>
+                <button 
+                  onClick={() => navigateTo('activities')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'activities' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Activities
+                </button>
+                <button 
+                  onClick={() => navigateTo('certifications')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'certifications' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Certifications
+                </button>
+                <button 
+                  onClick={() => navigateTo('contact')} 
+                  className={`text-left px-4 py-2 rounded transition-colors ${view === 'contact' ? 'text-white bg-white/10' : 'text-zinc-400 hover:text-white hover:bg-white/5'}`}
+                >
+                  Contact
+                </button>
+              </div>
+            </motion.div>
+          )}
+        </AnimatePresence>
       </nav>
 
       <AnimatePresence mode="wait">
