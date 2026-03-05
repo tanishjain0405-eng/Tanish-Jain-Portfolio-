@@ -1079,9 +1079,6 @@ Whether it's a business model, a market shift, or a strategic decision, I'm inte
         )}
       </AnimatePresence>
 
-        </Section>
-      </div>
-
       {/* Footer */}
       <footer className="py-12 px-6 border-t border-zinc-900 text-center">
         <div className="font-mono text-[10px] uppercase tracking-[0.5em] text-zinc-600">
