@@ -825,12 +825,6 @@ export default function App() {
             className="pt-48 pb-32"
           >
             <Section>
-              <div className="mb-24">
-                <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Performance is a habit. Not a mood.
-                </h1>
-              </div>
-
               <div className="grid md:grid-cols-2 gap-12">
                 {[
                   {
@@ -928,12 +922,6 @@ export default function App() {
             className="pt-48 pb-32"
           >
             <Section>
-              <div className="mb-24">
-                <h1 className="text-5xl md:text-7xl font-medium text-white tracking-tighter mb-8">
-                  Across certifications objective remains consistent: Build institutional depth
-                </h1>
-              </div>
-
               <div className="grid md:grid-cols-2 gap-8 md:gap-12">
                 {[
                   {
