@@ -1079,36 +1079,6 @@ Whether it's a business model, a market shift, or a strategic decision, I'm inte
         )}
       </AnimatePresence>
 
-      {/* Section 6 — CTA (Common) */}
-      <div className="bg-white text-black py-32">
-        <Section>
-          <div className="grid md:grid-cols-2 gap-16 items-center">
-            <div>
-              <h2 className="text-5xl md:text-7xl font-medium tracking-tighter leading-none mb-8">
-                Let's build something that matters.
-              </h2>
-              <p className="text-xl text-zinc-600 mb-12">
-                If you’re building in an environment where clarity, execution, and discipline are the primary drivers — let’s connect.
-              </p>
-              <div className="flex flex-wrap gap-4">
-                <button 
-                  onClick={() => navigateTo('contact')}
-                  className="px-8 py-4 bg-black text-white font-medium rounded-full flex items-center gap-2 hover:bg-zinc-800 transition-all"
-                >
-                  Get In Touch <Mail className="w-4 h-4" />
-                </button>
-                <button className="px-8 py-4 border border-zinc-300 text-black font-medium rounded-full hover:bg-zinc-100 transition-all flex items-center gap-2">
-                  Download Resume <Download className="w-4 h-4" />
-                </button>
-              </div>
-            </div>
-            <div className="space-y-6 border-l border-zinc-200 pl-8">
-              <div className="text-sm font-mono uppercase tracking-widest text-zinc-400">Environment Fit</div>
-              <div className="text-2xl font-medium">Clarity {'>'} Noise</div>
-              <div className="text-2xl font-medium">Execution {'>'} Optics</div>
-              <div className="text-2xl font-medium">Discipline {'>'} Momentum</div>
-            </div>
-          </div>
         </Section>
       </div>
 
