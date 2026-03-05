@@ -575,138 +575,54 @@ export default function App() {
               </button>
 
               <AboutSection title="Origin">
-                <div className="space-y-8 text-2xl md:text-3xl text-zinc-400 leading-tight">
-                  <p>I didn’t start with a title in mind.</p>
-                  <p>I started with a question:</p>
-                  <p className="text-white font-medium italic">Why do some decisions compound while others collapse?</p>
-                  <p className="text-lg md:text-xl leading-relaxed mt-12">
-                    My early curiosity wasn’t about entrepreneurship or finance as labels. 
-                    It was about systems — how incentives shape behavior, how capital moves through markets, how structure determines survival.
-                  </p>
-                  <div className="grid gap-6 mt-12">
-                    <div className="p-6 border-l border-zinc-800 bg-zinc-950/50">
-                      <p className="text-lg text-white">Markets taught me discipline.</p>
-                    </div>
-                    <div className="p-6 border-l border-zinc-800 bg-zinc-950/50">
-                      <p className="text-lg text-white">Venture evaluation taught me that assumptions kill faster than competition.</p>
-                    </div>
-                    <div className="p-6 border-l border-zinc-800 bg-zinc-950/50">
-                      <p className="text-lg text-white">Building small ventures taught me that momentum without economics is fragility.</p>
-                    </div>
-                  </div>
-                  <p className="text-lg md:text-xl leading-relaxed mt-12">
-                    Over time, I stopped chasing experiences for variety. I started choosing environments for leverage.
-                  </p>
+                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
+                  <p>I didn't start with a title in mind. I started with a question:</p>
+                  <p className="text-2xl md:text-3xl text-white font-medium italic">"Why do some decisions compound while others collapse?"</p>
+                  <p className="mt-12">My curiosity was never about finance or entrepreneurship as labels. It was about systems — how incentives shape behavior, how capital moves, how structure determines survival.</p>
+                  <p className="mt-8">Markets taught me discipline. Venture evaluation taught me that assumptions kill faster than competition. Building early-stage ventures taught me that momentum without economics is fragility.</p>
                 </div>
               </AboutSection>
 
               <AboutSection title="The Pattern I Keep Noticing">
                 <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>
-                    Across trading desks, startup screening rooms, university strategy competitions, and early-stage builds — one pattern kept repeating:
-                  </p>
+                  <p>Across trading, startup screening, strategy competitions, and early builds — one pattern repeated:</p>
                   <p className="text-3xl md:text-4xl text-white font-medium tracking-tight">Most failures are structural.</p>
                   <ul className="space-y-4 mt-8">
                     <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Incentives misaligned</li>
                     <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Unit economics ignored</li>
                     <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Growth pursued before stability</li>
-                    <li className="flex items-center gap-4"><div className="w-1.5 h-1.5 bg-zinc-700 rounded-full" /> Decisions made emotionally</li>
                   </ul>
-                  <p className="mt-12">
-                    I became less interested in surface outcomes. More interested in underlying drivers.
-                  </p>
-                  <div className="pt-12 border-t border-zinc-900">
-                    <p className="text-sm font-mono uppercase tracking-widest text-zinc-600 mb-8">I don’t just ask, “Will this work?” I ask:</p>
-                    <div className="grid md:grid-cols-2 gap-8 text-white font-medium">
+                  <p className="mt-12">I stopped asking "Will this work?" I started asking:</p>
+                  <div className="pt-8 border-t border-zinc-900">
+                    <div className="grid md:grid-cols-2 gap-8 text-white font-medium mt-8">
                       <p>What must go right?</p>
                       <p>What breaks first?</p>
                       <p>Where is the leverage?</p>
-                      <p>Where is the hidden fragility?</p>
                     </div>
                   </div>
-                  <p className="mt-12 italic text-zinc-500">That lens shapes how I think, build, and operate.</p>
                 </div>
               </AboutSection>
 
               <AboutSection title="What Drives Me">
                 <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>I am not motivated by activity.</p>
-                  <p className="text-3xl md:text-4xl text-white font-medium tracking-tight">I am motivated by control through competence.</p>
-                  <p className="mt-12">I want to operate in environments where:</p>
-                  <div className="space-y-4">
-                    <div className="flex items-center gap-4 text-white"><ChevronRight className="w-4 h-4 text-zinc-700" /> Decisions move capital</div>
-                    <div className="flex items-center gap-4 text-white"><ChevronRight className="w-4 h-4 text-zinc-700" /> Execution has measurable stakes</div>
-                    <div className="flex items-center gap-4 text-white"><ChevronRight className="w-4 h-4 text-zinc-700" /> Accountability is visible</div>
-                  </div>
-                  <p className="mt-12">
-                    I am drawn to early or ambiguous situations — not because they are chaotic, but because they force clarity.
-                  </p>
-                  <div className="grid md:grid-cols-3 gap-8 mt-12">
-                    <div className="p-8 bg-zinc-950 border border-zinc-900 rounded-2xl">
-                      <div className="text-white font-medium mb-2">Zero</div>
-                      <p className="text-sm text-zinc-500">forces structure.</p>
-                    </div>
-                    <div className="p-8 bg-zinc-950 border border-zinc-900 rounded-2xl">
-                      <div className="text-white font-medium mb-2">Constraint</div>
-                      <p className="text-sm text-zinc-500">forces prioritization.</p>
-                    </div>
-                    <div className="p-8 bg-zinc-950 border border-zinc-900 rounded-2xl">
-                      <div className="text-white font-medium mb-2">Pressure</div>
-                      <p className="text-sm text-zinc-500">exposes weak thinking.</p>
-                    </div>
-                  </div>
-                  <p className="mt-12 text-white font-medium">That is where I perform best.</p>
+                  <p>I am not motivated by activity. I am motivated by control through competence.</p>
+                  <p className="mt-12">Constraint forces prioritization. Pressure exposes weak thinking. That is where I perform best.</p>
                 </div>
               </AboutSection>
 
               <AboutSection title="My Philosophy">
-                <div className="grid md:grid-cols-2 gap-12">
-                  {[
-                    { title: "On Capital", desc: "Capital amplifies structure. In disciplined systems, it accelerates dominance. In weak systems, it hides fragility temporarily." },
-                    { title: "On Growth", desc: "Growth should follow strength, not ego. Scaling inefficiency only compounds weakness." },
-                    { title: "On Risk", desc: "Risk is not avoided — it is calibrated. Exposure should be sized intelligently, not emotionally." },
-                    { title: "On Execution", desc: "Strategy without execution is theory. Execution without structure is waste. The advantage lies in combining both." },
-                  ].map((item, i) => (
-                    <div key={i} className="space-y-4">
-                      <h3 className="text-white font-medium">{item.title}</h3>
-                      <p className="text-zinc-500 leading-relaxed">{item.desc}</p>
-                    </div>
-                  ))}
+                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
+                  <p>Capital amplifies structure — in weak systems, it only hides fragility. Growth should follow strength, not ego. Risk is calibrated, not avoided. Strategy without execution is theory. Execution without structure is waste.</p>
                 </div>
               </AboutSection>
 
-              <AboutSection title="Where I’M Headed">
+              <AboutSection title="Where I'm Headed">
                 <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>Right now, I am intentionally compounding skill across five domains:</p>
-                  <div className="flex flex-wrap gap-4">
-                    {["Financial depth", "Strategic structuring", "Commercial alignment", "Execution authority", "AI-assisted leverage"].map((skill, i) => (
-                      <span key={i} className="px-4 py-2 bg-zinc-900 text-zinc-300 rounded-full text-sm font-mono">{skill}</span>
-                    ))}
-                  </div>
-                  <p className="mt-12">
-                    Long-term, I aim to build and control scalable systems — not participate in them passively.
-                  </p>
-                  <p>But I am not in a rush to claim titles.</p>
-                  <p className="text-3xl md:text-4xl text-white font-medium tracking-tight">I am in the phase of earning leverage.</p>
+                  <p>Intentionally compounding across financial depth, strategic structuring, and AI-assisted leverage. Long-term, I aim to build and control scalable systems — not participate in them passively.</p>
+                  <p>I am not in a rush to claim titles. I am in the phase of earning leverage.</p>
                 </div>
               </AboutSection>
 
-              <AboutSection title="The Standard I Hold">
-                <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
-                  <p>I never want my name associated with:</p>
-                  <div className="grid md:grid-cols-2 gap-4 text-zinc-600">
-                    <p>Average effort</p>
-                    <p>Unstructured thinking</p>
-                    <p>Hype without economics</p>
-                    <p>Execution without accountability</p>
-                  </div>
-                  <div className="pt-12 space-y-4">
-                    <p className="text-2xl text-white font-medium">If I am involved, I am accountable.</p>
-                    <p className="text-2xl text-white font-medium">If I commit, I deliver.</p>
-                  </div>
-                  <p className="mt-12 text-zinc-500 italic">Reputation compounds slowly — and I treat it as capital.</p>
-                </div>
-              </AboutSection>
             </Section>
           </motion.div>
         ) : view === 'projects' ? (
