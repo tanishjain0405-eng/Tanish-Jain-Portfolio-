@@ -567,13 +567,6 @@ export default function App() {
             className="pt-48 pb-32"
           >
             <Section>
-              <button 
-                onClick={() => navigateTo('home')}
-                className="flex items-center gap-2 text-sm font-mono uppercase tracking-widest text-zinc-500 hover:text-white transition-colors mb-24"
-              >
-                <ArrowLeft className="w-4 h-4" /> Back to Home
-              </button>
-
               <div className="space-y-8 text-lg md:text-xl text-zinc-400 leading-relaxed">
                   <p>I'm driven by a simple curiosity: how things actually work beneath the surface.
 Whether it's a business model, a market shift, or a strategic decision, I'm interested in understanding the mechanisms that shape outcomes — the incentives, constraints, and trade-offs that rarely show up on slides but ultimately determine whether ideas succeed or fail.</p>
